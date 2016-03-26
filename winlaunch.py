@@ -67,9 +67,9 @@ def launch(cmd):
 	if len(new_wids) < 1:
 		print('ERROR: launch(): too few window ids found')
 		return None
-	LAUNCHED.append([cmd, wid])
 	wid = int(new_wids[0], 16)
 	pid = win_pid(wid)
+	LAUNCHED.append([cmd, wid])
 	return wid, pid
 
 
